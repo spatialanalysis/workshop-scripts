@@ -1,0 +1,101 @@
+---
+title: "Custom and Animated Maps"
+author: "Angela Li"
+date: "2/19/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+> Tip: Use the `Ctrl-Opt-I` keyboard shortcut to insert a code chunk into your Markdown document.
+
+## Load packages
+
+```{r warning=FALSE, message=FALSE}
+library(sf)
+library(ggplot2)
+library(spData)
+library(tmap)
+library(magick)
+```
+
+## Look at data
+
+```{r}
+head(urban_agglomerations)
+str(urban_agglomerations)
+names(urban_agglomerations)
+```
+
+```{r}
+tail(urban_agglomerations)
+```
+
+Looks like `urban_agglomerations` is a panel-data version of population of global cities, between 1950 and 2030.
+
+## Make a ggplot2 map
+
+```{r}
+ggplot(urban_agglomerations) +
+  geom_sf()
+```
+```{r echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+# I had to do this because my spData for some reason was weird, you may not need to do this
+library(dplyr)
+
+names(world)
+world <- rename(world, geometry = geom)
+
+names(world)
+```
+
+
+```{r}
+ggplot(world) +
+  geom_sf()
+```
+
+```{r}
+ggplot() +
+  geom_sf(data = world) +
+  geom_sf(data = urban_agglomerations)
+```
+
+## Move it over to tmap!
+
+### Single custom map
+
+```{r}
+tm_shape(world) +
+  tm_polygons() +
+  tm_shape(urban_agglomerations) +
+  tm_dots(size = "population_millions", title.size = "Population (m)", col = "red")
+```
+
+### Map with small multiples
+
+```{r}
+tm_shape(world) +
+  tm_polygons() +
+  tm_shape(urban_agglomerations) +
+  tm_dots(size = "population_millions", title.size = "Population (m)", col = "red") +
+  tm_facets(by = "year")
+```
+
+### Map (animated!!)
+
+```{r}
+tm <- tm_shape(world) +
+  tm_polygons() +
+  tm_shape(urban_agglomerations) +
+  tm_dots(size = "population_millions", title.size = "Population (m)", col = "red") +
+  tm_facets(along = "year", free.coords = FALSE)
+
+tmap_animation(tm, "city-pop-anim.gif", loop = TRUE, delay = 80)
+```
+
+```{r}
+magick::image_read("city-pop-anim.gif")
+```
