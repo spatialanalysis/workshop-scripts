@@ -1,0 +1,56 @@
+---
+title: "Interactive Map Practice"
+author: "Angela Li"
+date: "2/26/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Make static tmap
+
+Challenge: use `spData` and `tmap` to make a map of `world` and `urbanagglomerations`.
+
+```{r}
+library(spData)
+library(tmap)
+library(mapview)
+library(leaflet)
+```
+
+```{r}
+tmap_mode("view")
+
+tm <- tm_shape(urban_agglomerations) +
+  tm_dots(title.size = "Population (m)")
+
+tm + tm_basemap(server = "Esri.OpenTopoMap")
+```
+
+```{r}
+?tm_basemap
+leaflet::providers
+```
+
+```{r}
+?mapview
+```
+
+
+```{r}
+mapview(world) +
+  mapview(urban_agglomerations)
+```
+
+```{r}
+leaflet(data = urban_agglomerations) %>%
+  addProviderTiles(providers$OpenStreetMap) %>%
+  addCircles() %>% 
+  setView(lng = -41, lat = 30, zoom = 2) %>%
+  addMiniMap()
+```
+
+
+
