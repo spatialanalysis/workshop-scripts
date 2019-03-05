@@ -12,13 +12,13 @@ library(leaflet)
 library(spData)
 library(dplyr)
 
-# Define UI for application that draws a histogram
+# Define UI for application that filters map points based on year and minimum population
 ui <- fluidPage(
    
    # Application title
    titlePanel("World Population Over Time"),
    
-   # Sidebar with a slider input for number of bins 
+   # Sidebar with a slider input for year, numeric input for population 
    sidebarLayout(
       sidebarPanel(
          # sliderInput("bins",
@@ -42,7 +42,7 @@ ui <- fluidPage(
                       value = 10)
       ),
       
-      # Show a plot of the generated distribution
+      # Show the map and table
       mainPanel(
          # plotOutput("distPlot"),
          leafletOutput("map"),
@@ -51,17 +51,9 @@ ui <- fluidPage(
    )
 )
 
-# Define server logic required to draw a histogram
+# Define server logic required to draw a map and table
 server <- function(input, output) {
-   
-   # output$distPlot <- renderPlot({
-   #    # generate bins based on input$bins from ui.R
-   #    x    <- faithful[, 2] 
-   #    bins <- seq(min(x), max(x), length.out = input$bins + 1)
-   #    
-   #    # draw the histogram with the specified number of bins
-   #    hist(x, breaks = bins, col = 'darkgray', border = 'white')
-   # })
+
    
    output$map <- renderLeaflet({
      
@@ -87,4 +79,3 @@ server <- function(input, output) {
 
 # Run the application 
 shinyApp(ui = ui, server = server)
-
