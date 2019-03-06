@@ -21,12 +21,7 @@ ui <- fluidPage(
    # Sidebar with a slider input for year, numeric input for population 
    sidebarLayout(
       sidebarPanel(
-         # sliderInput("bins",
-         #             "Number of bins:",
-         #             min = 10,
-         #             max = 50,
-         #             value = 30),
-         
+
          sliderInput("year",
                      "Year",
                      min = 1950,
