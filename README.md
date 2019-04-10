@@ -9,15 +9,18 @@ Workshops are run by Angela Li, R Spatial Advocate, and detailed notes for the w
 Contents
 --------
 
-Each quarter's contents can be found in a separate folder in this repository with that quarter's name, ie `winter-2019`.
+Each quarter's contents can be found in a separate folder in each topic repository with that quarter's name, ie `gis-visualization/winter-2019`.
 
-### spring-2019
+Gis and Visualization
+---------------------
+
+### Spring 2019
 
 | Date       | Topic                                                                                                              | R Script / R Markdown                                                                                                          |
 |------------|--------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
 | 2019-04-10 | [Introduction to spatial data](https://spatialanalysis.github.io/workshop-notes/introduction-to-spatial-data.html) | [import-data.R](https://github.com/spatialanalysis/workshop-scripts/blob/master/gis-visualization/spring-2019/R/import-data.R) |
 
-### winter-2019
+### Winter 2019
 
 | Date       | Topic                                                                                                                                         | R Script / R Markdown                                                                                                              |
 |------------|-----------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
@@ -29,3 +32,13 @@ Each quarter's contents can be found in a separate folder in this repository wit
 | 2019-02-19 | [Custom static maps and animated maps](https://spatialanalysis.github.io/workshop-notes/custom-and-animated-maps.html)                        | [06-custom-maps.Rmd](https://github.com/spatialanalysis/workshop-scripts/blob/master/winter-2019/doc/06-custom-maps.Rmd)           |
 | 2019-02-26 | [Interactive maps](https://spatialanalysis.github.io/workshop-notes/interactive-maps.html)                                                    | [07-interactive-maps.Rmd](https://github.com/spatialanalysis/workshop-scripts/blob/master/winter-2019/doc/07-interactive-maps.Rmd) |
 | 2019-02-26 | [Interactive maps with Shiny](https://spatialanalysis.github.io/workshop-notes/interactive-maps-with-shiny.html)                              | [app.R](https://github.com/spatialanalysis/workshop-scripts/blob/master/winter-2019/R/leaflet-example/app.R)                       |
+
+Raster Data and Kriging
+-----------------------
+
+Spring 2019
+-----------
+
+| Date       | Topic                       | R Script / R Markdown |
+|------------|-----------------------------|-----------------------|
+| 2019-04-10 | Introduction to raster data |                       |
