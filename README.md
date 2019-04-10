@@ -13,9 +13,9 @@ Each quarter's contents can be found in a separate folder in this repository wit
 
 ### spring-2019
 
-| Date       | Topic                                                                                                              | R Script / R Markdown |
-|------------|--------------------------------------------------------------------------------------------------------------------|-----------------------|
-| 2019-04-10 | [Introduction to spatial data](https://spatialanalysis.github.io/workshop-notes/introduction-to-spatial-data.html) | 01-intro.R            |
+| Date       | Topic                                                                                                              | R Script / R Markdown                                                                                                          |
+|------------|--------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
+| 2019-04-10 | [Introduction to spatial data](https://spatialanalysis.github.io/workshop-notes/introduction-to-spatial-data.html) | [import-data.R](https://github.com/spatialanalysis/workshop-scripts/blob/master/gis-visualization/spring-2019/R/import-data.R) |
 
 ### winter-2019
 
