@@ -2,12 +2,22 @@
 workshop-scripts
 ================
 
-This repository contains scripts from the Winter 2019 version of the [R Spatial Workshop](https://spatialanalysis.github.io/events/) run at the Center for Spatial Data Science at the University of Chicago.
+This repository contains scripts from the each quarter of the [R Spatial Workshop](https://spatialanalysis.github.io/events/) run at the Center for Spatial Data Science at the University of Chicago.
 
 Workshops are run by Angela Li, R Spatial Advocate, and detailed notes for the workshops can be found [online](https://spatialanalysis.github.io/workshop-notes/).
 
 Contents
 --------
+
+Each quarter's contents can be found in a separate folder in this repository with that quarter's name, ie `winter-2019`.
+
+### spring-2019
+
+| Date       | Topic                                                                                                              | R Script / R Markdown |
+|------------|--------------------------------------------------------------------------------------------------------------------|-----------------------|
+| 2019-04-10 | [Introduction to spatial data](https://spatialanalysis.github.io/workshop-notes/introduction-to-spatial-data.html) | 01-intro.R            |
+
+### winter-2019
 
 | Date       | Topic                                                                                                                                         | R Script / R Markdown                                                                                                  |
 |------------|-----------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
