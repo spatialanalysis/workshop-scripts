@@ -8,8 +8,6 @@ This repository contains scripts from the each quarter of the [R Spatial Worksho
 
 Workshops are run by Angela Li, R Spatial Advocate, and detailed notes for the workshops can be found [online](https://spatialanalysis.github.io/workshop-notes/).
 
-## Contents
-
 Each quarter's contents can be found in a separate folder in each topic repository with that quarter's name, ie `gis-visualization/winter-2019`.
 
 ## Spring 2019
