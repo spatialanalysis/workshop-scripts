@@ -13,9 +13,10 @@ Spring 2019
 
 ### GIS and Visualization
 
-| Date       | Topic                                                                                                              | R Script / R Markdown                                          |
-|------------|--------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|
-| 2019-04-10 | [Introduction to spatial data](https://spatialanalysis.github.io/workshop-notes/introduction-to-spatial-data.html) | [import-data.R](gis-visualization/spring-2019/R/import-data.R) |
+| Date       | Topic                                                                                                                | R Script / R Markdown                                            |
+|------------|----------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|
+| 2019-04-10 | [Introduction to spatial data](https://spatialanalysis.github.io/workshop-notes/introduction-to-spatial-data.html)   | [import-data.R](gis-visualization/spring-2019/R/import-data.R)   |
+| 2019-04-17 | [Single-dataset GIS operations](https://spatialanalysis.github.io/workshop-notes/single-dataset-gis-operations.html) | [gis-learning.R](gis-visualization/spring-2019/R/gis-learning.R) |
 
 ### Raster Data and Kriging
 
