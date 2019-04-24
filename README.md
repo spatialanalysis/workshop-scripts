@@ -20,9 +20,10 @@ Spring 2019
 
 ### Raster Data and Kriging
 
-| Date       | Topic                                                                                                            | R Script / R Markdown                                         |
-|------------|------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
-| 2019-04-10 | [Introduction to raster data](https://spatialanalysis.github.io/workshop-notes/introduction-to-raster-data.html) | [raster-intro.R](raster-kriging/spring-2019/R/raster-intro.R) |
+| Date       | Topic                                                                                                              | R Script / R Markdown                                            |
+|------------|--------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|
+| 2019-04-10 | [Introduction to raster data](https://datacarpentry.org/r-raster-vector-geospatial/01-raster-structure/index.html) | [raster-intro.R](raster-kriging/spring-2019/R/raster-intro.R)    |
+| 2019-04-17 | [Plotting raster data](https://datacarpentry.org/r-raster-vector-geospatial/02-raster-plot/index.html)             | [raster-intro.R](raster-kriging/spring-2019/R/raster-plotting.R) |
 
 Winter 2019
 -----------
