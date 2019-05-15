@@ -1,0 +1,77 @@
+---
+title: "R Markdown Practice"
+author: "Angela Li"
+date: "5/15/2019"
+output: 
+  html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, cache = TRUE)
+```
+
+## Data Used
+
+We will be using two datasets:
+
+- [Library **point** data](https://data.cityofchicago.org/Education/Libraries-Locations-Hours-and-Contact-Information/x8fc-8rcq)
+- [Community *area* polygons](https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas-current-/cauq-8yn6)
+
+We will store these as the `libraries` and `areas` datasets.
+
+### Details of Data
+
+1. The data was collected from Chicago Open Data.
+2. The data was last updated in 2017.
+
+# Load Packages
+
+```{r packages, message=FALSE}
+library(sf)
+library(ggplot2)
+library(dplyr)
+```
+
+# Read and project data
+
+```{r project-data, results='hide', echo=FALSE}
+libraries <- read_sf("https://data.cityofchicago.org/resource/psqp-6rmg.geojson")
+areas <- read_sf("https://data.cityofchicago.org/resource/igwz-8jzy.geojson")
+
+libraries <- st_transform(libraries, 32616)
+areas <- st_transform(areas, 32616)
+
+libraries
+areas
+```
+
+# Make a map!
+
+```{r map, fig.height=3, fig.width=3}
+ggplot() +
+  geom_sf(data = areas) +
+  geom_sf(data = libraries)
+```
+
+
+
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE, eval=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
