@@ -1,0 +1,76 @@
+---
+title: "Making Custom Maps with tmap"
+author: "Angela Li"
+date: "5/22/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Animated Map Example
+
+This is our ultimate goal!
+```{r eval=FALSE}
+library(sf)
+library(tidyverse)
+library(spData)
+library(tmap)
+m_save = world %>% filter(continent != "Antarctica") %>% 
+  tm_shape() + 
+  tm_polygons() +
+  tm_shape(urban_agglomerations) +
+  tm_dots(size = "population_millions", title.size = "Population (m)", alpha = 0.5, col = "red") +
+  tm_facets(along = "year", free.coords = FALSE)
+tmap::tmap_animation(tm = m_save, filename = "/tmp/urban-animated.gif", width = 1200, height = 800)
+magick::image_read("/tmp/urban-animated.gif")
+```
+
+# Load packages
+```{r message=FALSE}
+library(sf) # for spatial data
+library(spData) # sample data I'm working with
+library(tidyverse) # for data wrangling
+library(tmap) # for custom maps
+```
+
+# Explore my data
+```{r}
+head(urban_agglomerations)
+head(world)
+
+summary(urban_agglomerations)
+str(urban_agglomerations) # base R version
+glimpse(urban_agglomerations) # tidyverse version - I prefer this one
+class(urban_agglomerations) # tells you what type of object this is
+dim(urban_agglomerations) # dimensions of data
+```
+
+# Make a ggplot2 map
+```{r}
+ggplot() +
+  geom_sf(data = urban_agglomerations)
+```
+
+```{r}
+ggplot() +
+  geom_sf(data = world) +
+  geom_sf(data = urban_agglomerations)
+```
+
+# Try making the same map in tmap
+```{r}
+tm_shape(world) +
+  tm_polygons() +
+  tm_shape(urban_agglomerations) +
+  tm_dots(size = "population_millions") +
+  tm_compass() +
+  tm_scale_bar(position = c("left", "bottom")) +
+  tm_legend(legend.outside = TRUE) +
+  tm_layout(panel.show = TRUE, panel.labels = c("World population in 1950"))
+```
+
+
+
+
