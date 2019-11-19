@@ -1,0 +1,84 @@
+---
+title: "Intro to rgeoda"
+author: "Angela Li"
+date: "11/19/2019"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load data
+
+```{r}
+library(rgeoda)
+library(geodaData)
+library(sf)
+
+guerry_sf <- geodaData::guerry
+```
+
+## Plot maps
+
+```{r}
+plot(guerry_sf)
+```
+
+Explore data, looks like this a a Lambert Conformal Conic Projection. 
+
+```{r}
+head(guerry_sf)
+st_crs(guerry_sf)
+```
+
+```{r}
+guerry <- sf_to_geoda(guerry_sf, with_table = TRUE)
+class(guerry)
+```
+
+```{r}
+guerry$table
+guerry$n_cols
+```
+
+## Calculate queen weights
+
+```{r}
+queen_w <- queen_weights(guerry)
+```
+
+To save this....
+
+```{r}
+class(queen_w)
+queen_w$SaveToFile("queen_weights.gal",
+                   "guerry",
+                   "CODE_DE",
+                   guerry$GetIntegerCol("CODE_DE"))
+```
+
+## Local Moran
+
+```{r}
+lisa <- local_moran(queen_w, guerry$GetIntegerCol("crm_prp"))
+
+class(lisa)
+```
+
+```{r}
+lisa$GetLISAValues()
+lisa_colors <- lisa$GetColors()
+lisa_labels <- lisa$GetLabels()
+lisa_clusters <- lisa$GetClusterIndicators()
+
+lisa_colors
+lisa_clusters
+```
+
+
+
+
+
