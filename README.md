@@ -13,6 +13,21 @@ Each quarter’s contents can be found in a separate folder in each topic
 repository with that quarter’s name, ie
 `gis-visualization/winter-2019`.
 
+## Fall 2019
+
+### Introduction to Spatial Data Science
+
+| Date       | Topic                                                                                                                            | R Script / R Markdown                                                           |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| 2019-10-08 | [Spatial data handling](https://spatialanalysis.github.io/workshop-notes/spatial-data-handling.html)                             | [01-spatial-data-handling.R](intro-spatial-data-sci/01-spatial-data-handling.R) |
+| 2019-10-15 | [Spatial data handling pt. 2](https://spatialanalysis.github.io/workshop-notes/spatial-data-handling.html)                       | [week2-fall2019-workshop.R](intro-spatial-data-sci/week2-fall2019-workshop.R)   |
+| 2019-10-22 | [Basic mapping pt. 1](https://spatialanalysis.github.io/workshop-notes/basic-mapping.html)                                       | [week3-fall2019-workshop.R](intro-spatial-data-sci/week3-fall2019-workshop.R)   |
+| 2019-10-29 | [Basic mapping pt. 2](https://spatialanalysis.github.io/workshop-notes/basic-mapping.html)                                       | [week4-fall2019-workshop.R](intro-spatial-data-sci/week4-fall2019-workshop.R)   |
+| 2019-11-05 | [Contiguity weights](https://spatialanalysis.github.io/workshop-notes/spatial-autocorrelation.html)                              | [week5-fall2019-workshop.R](intro-spatial-data-sci/week5-fall2019-workshop.R)   |
+| 2019-11-12 | [Distance-based weights](https://spatialanalysis.github.io/workshop-notes/spatial-autocorrelation.html)                          | [week6-fall2019-workshop.R](intro-spatial-data-sci/week6-fall2019-workshop.R)   |
+| 2019-11-19 | [Spatial autocorrelation with rgeoda](https://spatialanalysis.github.io/workshop-notes/spatial-autocorrelation-with-rgeoda.html) | [intro-rgeoda.Rmd](intro-spatial-data-sci/intro-rgeoda.Rmd)                     |
+| 2019-11-26 | Spatial clustering with rgeoda                                                                                                   |                                                                                 |
+
 ## Spring 2019
 
 ### GIS and Visualization
